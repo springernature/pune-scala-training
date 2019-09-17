@@ -1,0 +1,7 @@
+**functions, higer order functions**
+
+-- add, sub, multiply, divide as functions
+-- input No<op>No as string  (single digit only)
+-- capture as 3 parts
+-- determine the operation using a function. input = string  output = function (Int,Int => Int)
+-- apply the function and return the result.
