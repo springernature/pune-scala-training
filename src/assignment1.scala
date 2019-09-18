@@ -1,0 +1,6 @@
+class assignment1 {
+
+
+
+}
+
