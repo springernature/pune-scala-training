@@ -14,5 +14,5 @@ class Article(val name :String,val pubDate:Date)
 val isPublished
 
   def this(name:String ,pubDate:Date,_isPublished:Boolean)={
-    
+
   }
