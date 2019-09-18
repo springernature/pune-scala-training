@@ -18,4 +18,5 @@ lazy val newname = "Akshay"
 
 println(name + newname)
 
+println(name.charAt(0))
 
