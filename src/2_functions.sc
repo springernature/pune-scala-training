@@ -7,36 +7,30 @@ object MathApp{
 
 MathApp.main(Array())
 
-def add (a:Int,b:Int):Int={
-  a+b
-}
+val add: (Int,Int)=>Int=(a,b)=>a+b
 
-def sub(a:Int,b:Int):Int={
-  a-b
-}
+val sub: (Int,Int)=>Int=(a,b)=>a-b
+
 
 val multiOp: (Int,Int)=>Int=(a,b)=>a*b
 
 val divOp:(Int,Int)=>Int=(a,b)=>a/b
 
 
-def calculator(a:Int,b:Int,fun:((Int,Int)=>Int)):Int={
-  fun(a,b)
-}
-
-
 def calculator1(a:String):Int= {
 
+  val x=a.charAt(0).toString.toInt
+  val y=a.charAt(2).toString.toInt
 
-  a.charAt(0) match {
-    case '+' => add(a.charAt(0), a.charAt(2))
-    case '-' => sub(a.charAt(0), a.charAt(2))
-    case '/' => divOp(a.charAt(0), a.charAt(2))
-    case '*' => multiOp(a.charAt(0), a.charAt(2))
+  a.charAt(1) match {
+    case '+' => add(x,y);
+    case '-' => sub(x,y);
+    case '/' => divOp(a.charAt(0).toInt, a.charAt(2).toInt);
+    case '*' => multiOp(a.charAt(0).toInt, a.charAt(2).toInt);
 
   }
 }
 
-calculator1("5+6")
+calculator1("7/2")
 
 
