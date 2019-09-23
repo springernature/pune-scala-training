@@ -19,3 +19,6 @@
    -- More milk and sugar can be added, in the form of unit(s) i.e. 1 unit, 2 unit.
    -- classes should be immutable, means changes should give back a new instance.
 
+
+**collections
+-- http://aperiodic.net/phil/scala/s-99/

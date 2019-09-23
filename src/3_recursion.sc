@@ -31,12 +31,13 @@ factorialRec(5)
 @tailrec
 def factorialTailRec(i:Int, fact:Int):Int = {
   if(i <= 1)
-    throw new Exception("check stack")
+    1 * fact
   else
     factorialTailRec(i -1, i * fact)
 }
 
 factorialTailRec(5, 1)
+
 
 
 
