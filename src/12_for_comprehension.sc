@@ -22,6 +22,17 @@ for {
   number + alphabet
 }
 
+numbers.flatMap(num => alphabets.map(alpha => num + alpha))
+
+val mayBeString : Option[String] = Some("string")
+
+numbers.flatMap(num => mayBeString.map(_ + num))
+
+val mayNotBeString : Option[String] = None
+
+numbers.flatMap(num => mayNotBeString.map(_ + num))
+
+mayBeString.flatMap(str => Some(numbers.map(_ + str)))
 
 
 
