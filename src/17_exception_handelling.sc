@@ -31,11 +31,13 @@ def again(n : Int) ={
   }
 }
 
+val mayBevalue: Try[Int] = perform (55)
+val mayBeProcessedValue: Try[Int] = mayBevalue.map(succesValue => succesValue*succesValue)
+
 
 perform (55) match {
   case Success(value) => value
-  case Failure(exception) =>
-
+  case Failure(exception) => println(exception.getMessage)
 }
 
 

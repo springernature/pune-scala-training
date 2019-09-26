@@ -29,5 +29,27 @@ zz
 print
 
 
+def getRandomEvenNumber = {
+  val num = (Math.random() * 10).toInt
+  if(num % 2 ==0 ) Some(num)
+  else None
+}
+
+val mayBeName:Option[String] = Some("Piyush")
+val mayBeNumber = getRandomEvenNumber
+
+/*handling option by pattern match*/
+mayBeNumber match {
+  case Some(value) => Some(value * value)
+  case None => { println("not found")
+    None
+  }
+}
+
+/* direct handling, None is directly returned*/
+val maybeOutput: Option[Int] = mayBeNumber.map(value => value * value)
+
+mayBeNumber.filter(number => number > 5)
+
 
 
