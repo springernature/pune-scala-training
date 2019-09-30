@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: com.marklogic:marklogic-xcc:8.0.9:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/http/developer.marklogic.com/maven2/com/marklogic/marklogic-xcc/8.0.9/marklogic-xcc-8.0.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -15,7 +15,7 @@ def perform(n : Int): Try[Int] = {
 }
 
 
-def again(n : Int) ={
+def again(n : Int) = {
 
   try{
 
