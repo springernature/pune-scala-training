@@ -29,7 +29,10 @@
 
 
 ** futures
-
+-- Create a class that will retrieve users from below URLs using StandaloneWSClient and concatenate the response body string and print on the console (refer code in class 'UsingFuturesWithRestService.scala' as reference). Also add exception handling for failure scenario that will print the exception message.
+Success scenario - https://reqres.in/api/users/10
+ 				   https://reqres.in/api/users/11
+Failure scenario - https://reqres.innn/api/users/10
 
 
 ** sbt and unit tests
