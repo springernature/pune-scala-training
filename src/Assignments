@@ -22,3 +22,17 @@
 
 **collections
 -- http://aperiodic.net/phil/scala/s-99/
+
+
+** case classes, pattern matching
+
+
+
+** futures
+
+
+
+** sbt and unit tests
+-- ETL assignment using scala.
+   Do not use `var`, mutable collections.
+   write scala tests for all components.
