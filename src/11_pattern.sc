@@ -82,7 +82,7 @@ def perform(in:Int):scala.util.Try[Int]={
 }
 
 perform (20) match {
-  case scala.util.Success(value) =>"Here"
+  case scala.util.Success(value) =>"Here"+value
   case scala.util.Failure(value)=>"Failed"
 
 }
@@ -109,6 +109,46 @@ object User {
   
   def apply(userName:String)="hello"
 
-  def unapply(arg: User): Option[String] = ???
+  def unapply(arg: User): Option[String] = ??? // similar to nothing
 }
+
+
+trait Animal {
+  val name:String
+  val eats:String
+}
+
+case class Cat(namee:String, eatss:String) extends Animal {
+  override val name = namee
+  override val eats = eatss
+
+  def catDetails: Unit = {
+    println("I am cat details = " + name + " " + eats)
+  }
+
+}
+case class Dog(namee:String, eatss:String) extends Animal {
+    override val name = namee
+    override val eats = eatss
+
+    def dogDetails: Unit ={
+      println("I am dog details = "+ name + " "+eats)
+    }
+  }
+
+def matchAnimal(anyAnimal:Animal): String = {
+  anyAnimal match {
+    case anyAnimal @ (anyAnimal.name=="stange") => "Strage animal"+anyAnimal.name+anyAnimal
+    case anyAnimal @ Dog(name, eat)=> "Dog animal"+anyAnimal.name+anyAnimal.dogDetails
+    case anyAnimal @ Cat(name, eat)=> "Cat animal"+anyAnimal.name+anyAnimal.catDetails
+    case _=>"unknown animal"
+  }
+}
+
+println(matchAnimal(new Dog("tommy", "chicken" )))
+matchAnimal(new Dog("Strange", "chicken" ))
+matchAnimal(new Cat("Kitty", "chicken" ))
+
+
+
 

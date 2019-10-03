@@ -13,5 +13,5 @@ object Vehicle{
   }
 }
 
-val v=Vehicle.apply(23)
+//val v=Vehicle.apply(23)
 
