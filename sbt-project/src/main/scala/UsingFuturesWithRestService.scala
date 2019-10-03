@@ -12,9 +12,9 @@ object UsingFuturesWithRestService {
   def call(wsClient: StandaloneWSClient): Future[Unit] = {
     val user1Future: Future[StandaloneWSRequest#Response] =
       wsClient.url("https://reqres.in/api/users/1").get()
-    val user2Future =
+    val user2Future: Future[StandaloneWSRequest#Response] =
       wsClient.url("https://reqres.in/api/users/2").get()
-    val user3Future =
+    val user3Future: Future[StandaloneWSRequest#Response] =
       wsClient.url("https://reqres.in/api/users/3").get()
 
     user2Future.map { user2 =>
