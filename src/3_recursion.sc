@@ -29,14 +29,14 @@ factorialRec(5)
 
 //factorial example using tail recursion
 @tailrec
-def factorialTailRec(i:Int, fact:Int):Int = {
+def factorialTailRec(i:Int, fact:Int = 1):Int = {
   if(i <= 1)
     1 * fact
   else
     factorialTailRec(i -1, i * fact)
 }
 
-factorialTailRec(5, 1)
+factorialTailRec(5)
 
 
 

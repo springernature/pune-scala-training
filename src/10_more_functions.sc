@@ -1,5 +1,5 @@
 val numbers = (1 to 10).toList
-val slidenumbers = numbers.sliding(3)
+val slidenumbers: Iterator[List[Int]] = numbers.sliding(3)
 
 println(slidenumbers.foreach(x =>println(x)))
 
@@ -19,3 +19,8 @@ val numberStrings = (1 to 5).toList.map(x => x.toString)
 val acc1 = numberStrings.foldRight("+")( (num, acc) => acc + "_" + num )
 val acc2 = numberStrings.foldLeft("+")( (num, acc) => acc + "_" + num )
 
+val alphabets = List("A", "B", "C")
+alphabets.foldLeft("")( (a, fact) => a + " " + fact )
+
+alphabets.mkString(" ")
+alphabets.mkString("(", " ", ")")

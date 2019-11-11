@@ -1,6 +1,6 @@
 val a = List(1,2,3)
 
-a.map( x => x *2)
+val op = a.map( x => x *2)
 a.map( x => x.toString)
 a.map( x => println(x))
 
@@ -24,6 +24,12 @@ a.filter(filterOdd)
 a.foreach(println(_))
 a.filter(_ % 2 == 0)
 a.map(_.toString)
+
+
+val words = List("Piyush", "Chandra", "Deepak", "Ram")
+words.map(entry => entry.size)
+     .filter(e => e % 2 ==0)
+     .sum
 
 
 
